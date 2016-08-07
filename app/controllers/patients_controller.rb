@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  before_action :set_patient, only: [:show, :edit, :update, :destroy, :view_location]
 
   # GET /patients
   # GET /patients.json
@@ -11,6 +11,10 @@ class PatientsController < ApplicationController
   # GET /patients/1.json
   def show
     @patient.increment!(:viewed_count)
+  end
+
+  def view_location
+    render "locations/show"
   end
 
   # GET /patients/new

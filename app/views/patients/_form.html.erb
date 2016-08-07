@@ -27,7 +27,7 @@
   </div>
   Location Information<hr>
   <div class="field">
-    <%= f.fields_for :location_attributes, remote: true do |location_form| %>
+    <%= f.fields_for :location_attributes do |location_form| %>
       <div class="field">
         <%= location_form.label :code %>
         <%= location_form.text_field :code %>

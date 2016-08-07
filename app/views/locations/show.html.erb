@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @patient.location.code %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @patient.location.name %>
+</p>
+
+<%= link_to 'Back', patients_path %>

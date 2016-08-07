@@ -24,7 +24,7 @@
         <td><%= patient_age patient %></td>
         <td><%= patient.gender %></td>
         <td><%= patient.status %></td>
-        <td><%= patient.location.name %></td>
+        <td><%= link_to patient.location.name, view_location_patient_path(patient) %></td>
         <td><%= patient.viewed_count %></td>
         <td><%= link_to 'Show', patient %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
