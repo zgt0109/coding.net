@@ -5,6 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <%= t("view.language") %>:
+  <%= link_to_unless_current "English", locale: 'en' %> |
+  <%= link_to_unless_current "Chinese", locale: 'zh-CN' %>
 </head>
 <body>
 

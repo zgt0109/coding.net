@@ -1,44 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @patient.first_name %>
+  <strong><%= t("view.medical_record_number") %>:</strong>
+  <%= medical_record_number @patient %>
 </p>
 
 <p>
-  <strong>Middle name:</strong>
-  <%= @patient.middle_name %>
+  <strong><%= t("view.full_name") %>:</strong>
+  <%= full_name @patient %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @patient.last_name %>
+  <strong><%= t("view.age") %>:</strong>
+  <%= patient_age @patient %>
 </p>
 
 <p>
-  <strong>Birthday:</strong>
-  <%= @patient.birthday %>
+  <strong><%= t("view.gender") %>:</strong>
+  <%= @patient.gender.text %>
 </p>
 
 <p>
-  <strong>Gender:</strong>
-  <%= @patient.gender %>
+  <strong><%= t("view.status") %>:</strong>
+  <%= @patient.status.text %>
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @patient.status %>
-</p>
-
-<p>
-  <strong>Location:</strong>
+  <strong><%= t("view.location_name") %>:</strong>
   <%= @patient.location.name %>
 </p>
 
 <p>
-  <strong>Viewed count:</strong>
+  <strong><%= t("view.viewed_count") %>:</strong>
   <%= @patient.viewed_count %>
 </p>
 
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to t("action.edit"), edit_patient_path(@patient) %> |
+<%= link_to t("action.back"), patients_path %>

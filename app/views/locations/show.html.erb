@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Code:</strong>
+  <strong><%= t("view.code") %>:</strong>
   <%= @patient.location.code %>
 </p>
 
 <p>
-  <strong>Location:</strong>
+  <strong><%= t("view.name") %>:</strong>
   <%= @patient.location.name %>
 </p>
 
-<%= link_to 'Back', patients_path %>
+<%= link_to t("action.back"), patients_path %>

@@ -21,3 +21,53 @@
 
 en:
   hello: "Hello world"
+  action:
+    new: New
+    edit: Edit
+    show: Show
+    destroy: Destroy
+    back: Back
+    options: Options
+  view:
+    medical_record_number: MedicalRecordNumber
+    full_name: FullName
+    age: Age
+    gender: Gender
+    status: Status
+    location_name: LocationName
+    viewed_count: ViewedCount
+    code: Code
+    name: Name
+    listing_patients: Listing Patients
+    language: English
+    new_patient: New Patient
+    editing_patient: Editing Patient
+    basic_information: Basic Information
+    location_information: Location Information
+  activerecord:
+    models:
+      patient: Patient
+      location: Location
+    attributes:
+      patient:
+        first_name: FirstName
+        middle_name: MiddleName
+        last_name: LastName
+        birthday: Birthday
+        gender: Gender
+        status: Status
+        viewed_count: ViewedCount
+      location:
+        code: Code
+        name: Name
+  enumerize:
+    defaults:
+      gender:
+        unavailable: Unavailable
+        male: Male
+        female: Female
+      status:
+        initial: Initial
+        referred: Referred
+        treatment: Treatment
+        closed: Closed

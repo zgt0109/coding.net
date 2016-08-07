@@ -1,6 +1,6 @@
 <%= form_for(@patient) do |f| %>
   <%= render "errors" %>
-  Basic Information<hr>
+  <%= t("view.basic_information") %><hr>
   <div class="field">
     <%= f.label :first_name %><br>
     <%= f.text_field :first_name %>
@@ -19,13 +19,21 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select :gender, Patient.gender.options %>
+
+    <%= f.radio_button :gender, "unavailable", :checked => true %>
+    <%= f.label :gender, "unavailable" %>
+
+    <%= f.radio_button :gender, "male" %>
+    <%= f.label :gender, "male" %>
+
+    <%= f.radio_button :gender, "female" %>
+    <%= f.label :gender, "male" %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
     <%= f.select :status, Patient.status.options %>
   </div>
-  Location Information<hr>
+  <%= t("view.location_information") %><hr>
   <div class="field">
     <%= f.fields_for :location_attributes do |location_form| %>
       <div class="field">

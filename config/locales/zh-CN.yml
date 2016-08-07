@@ -1,0 +1,51 @@
+zh-CN:
+  action:
+    new: 新增
+    edit: 编辑
+    show: 查看
+    destroy: 删除
+    back: 返回
+    options: 操作
+  view:
+    medical_record_number: 医疗记录号
+    full_name: 全名
+    age: 年龄
+    gender: 性别
+    status: 状态
+    location_name: 位置名称
+    viewed_count: 访问数
+    code: 代码
+    name: 位置名称
+    listing_patients: 患者列表
+    language: 中文
+    new_patient: 新增患者
+    editing_patient: 编辑患者
+    basic_information: 基本信息
+    location_information: 位置信息
+  activerecord:
+    models:
+      patient: 患者
+      location: 位置
+    attributes:
+      patient:
+        first_name: 名字
+        middle_name: 中间名
+        last_name: 姓
+        birthday: 出生日期
+        gender: 性别
+        status: 状态
+        viewed_count: 访问数
+      location:
+        code: 代码
+        name: 名称
+  enumerize:
+    defaults:
+      gender:
+        unavailable: '不限'
+        male: '男'
+        female: '女'
+      status:
+        initial: '初始'
+        referred: '提交'
+        treatment: '处理'
+        closed: '关闭'
