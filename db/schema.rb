@@ -11,6 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160806081308) do
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "code",              limit: 255
+    t.string   "name",              limit: 255
+    t.integer  "locationable_id",   limit: 4
+    t.string   "locationable_type", limit: 255
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "first_name",   limit: 255
+    t.string   "middle_name",  limit: 255
+    t.string   "last_name",    limit: 255
+    t.date     "birthday"
+    t.string   "gender",       limit: 255
+    t.string   "status",       limit: 255
+    t.integer  "viewed_count", limit: 4
+    t.datetime "deleted_at"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
 end

@@ -1,0 +1,44 @@
+<%= form_for(@patient) do |f| %>
+  <%= render "errors" %>
+  Basic Information<hr>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.date_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.select :gender, Patient.gender.options %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.select :status, Patient.status.options %>
+  </div>
+  Location Information<hr>
+  <div class="field">
+    <%= f.fields_for :location_attributes, remote: true do |location_form| %>
+      <div class="field">
+        <%= location_form.label :code %>
+        <%= location_form.text_field :code %>
+      </div>
+      <div class="field">
+        <%= location_form.label :name %>
+        <%= location_form.text_field :name %>
+      </div>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

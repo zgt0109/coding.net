@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'annotate'
 gem 'pry-rails'
 gem 'rails-i18n'
-gem 'paranoia'
+gem "paranoia", "~> 2.0"
 gem 'enumerize'
 
 # Use ActiveModel has_secure_password
