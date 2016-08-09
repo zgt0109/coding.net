@@ -27,6 +27,8 @@ class Patient < ActiveRecord::Base
   validates :middle_name, length: { maximum: 10 }
   validates :last_name, length: { maximum: 30 }
 
+  scope :on_treatment, -> (treatment){ where("status = ?", treatment) }
+
   enumerize :gender, in: [:unavailable, :male, :female]
   enumerize :status, in: [:initial, :referred, :treatment, :closed]
 end
